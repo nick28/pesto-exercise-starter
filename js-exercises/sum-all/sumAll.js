@@ -1,7 +1,7 @@
-function sumAll({ startValue, lastValue }) {
+function sumAll([leftValue, rightValue]) {
   let sum = 0;
-  let lowerBound = (startValue < lastValue ? startValue : lastValue)
-  const upperBound = (startValue > lastValue ? startValue : lastValue)
+  let lowerBound = (leftValue < rightValue ? leftValue : rightValue);
+  const upperBound = (leftValue > rightValue ? leftValue : rightValue);
   while (lowerBound <= upperBound) {
     sum += lowerBound;
     lowerBound += 1;
