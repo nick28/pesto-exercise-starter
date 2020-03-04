@@ -1,6 +1,8 @@
-const isPrime = num => {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) if (num % i === 0) return false;
-  return num > 1;
+const isPrime = numToVerfify => {
+  for (let divisor = 2, sqrtOfNum = Math.sqrt(numToVerfify); divisor <= sqrtOfNum; divisor += 1) {
+    if (numToVerfify % divisor === 0) return false;
+  }
+  return numToVerfify > 1;
 };
 
 function sumPrimes(number) {
