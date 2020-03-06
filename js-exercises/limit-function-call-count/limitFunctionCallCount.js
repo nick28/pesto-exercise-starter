@@ -1,11 +1,11 @@
-const limitFunctionCallCount = (func, allowedCallCount) => {
-  let callCount = 0;
+const limitFunctionCallCount = (callback, allowedInvocationCount) => {
+  let callbackInvocationCount = 0;
   return (...args) => {
-    callCount += 1;
-    if (callCount > allowedCallCount) {
+    callbackInvocationCount += 1;
+    if (callbackInvocationCount > allowedInvocationCount) {
       return null;
     }
-    return func(...args);
+    return callback(...args);
   };
 };
 export { limitFunctionCallCount };
